@@ -241,7 +241,7 @@ a.singleCategory:hover {
     color: #cdcdcd;
 }
 
-a.singleCategory::before{
+a.singleCategory::before {
     content: "";
     background-color: #9f80a7;
     position: relative;
@@ -255,7 +255,7 @@ a.singleCategory::before{
 
 
 
-a.singleCategory:hover::before{
+a.singleCategory:hover::before {
     transform: scaleX(1);
 }
 
@@ -304,7 +304,7 @@ a.singleCategory {
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 
@@ -312,39 +312,83 @@ a.singleCategory {
 .singleContent {
     font-size: 15px;
     line-height: 27px;
-    color: #F0EBE3;
+    color: #a9b1d6;
     margin: 20px 0px;
 }
 
 
 .singleContent h1 {
-    color: #a9b1d6;
+    color: #bb9af7;
     font-size: 20px;
     line-height: 90px;
 }
 
 .singleContent h2 {
-    color: #a9b1d6;
+    color: #7aa2f7;
     font-size: 20px;
     line-height: 80px;
 }
 
 .singleContent h3 {
-    color: #a9b1d6;
+    color: #2ac3de;
     font-size: 20px;
     line-height: 70px;
 }
 
 
 .singleContent h4 {
-    color: #a9b1d6;
+    color: #ff9e64;
     font-size: 20px;
     line-height: 60px;
 }
 
+.singleContent a {
+    color: #73daca;
+    text-decoration: underline;
+}
+
+
+.singleContent ul, .singleContent ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.singleContent blockquote {
+    border-left: 3px solid #565f89;
+    /* Muted blue */
+    padding-left: 15px;
+    margin-left: 0;
+    color: #9aa5ce;
+    /* Lighter text for quotes */
+    font-style: italic;
+}
+
+
+.singleContent code {
+    background-color: #1a1b26;
+    /* Dark background */
+    color: #f7768e;
+    /* Pink */
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+
 .singleContent img {
     width: 100%;
     object-fit: cover;
+}
+
+
+
+.singleContent pre {
+    background-color: #1a1b26;
+    /* Dark background */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 15px;
 }
 
 
@@ -355,6 +399,70 @@ a.singleCategory {
     padding: 20px;
 }
 
+.singleContent pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.singleContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+
+.singleContent hr {
+    border: none;
+    border-top: 1px solid #565f89;
+    /* Muted blue */
+    margin: 20px 0;
+}
+
+.singleContent table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.singleContent th, .singleContent td {
+    border: 1px solid #565f89;
+    /* Muted blue */
+    padding: 8px;
+    text-align: left;
+}
+
+.singleContent th {
+    background-color: #1a1b26;
+    /* Dark background */
+    color: #7aa2f7;
+    /* Bright blue */
+}
+
+.singleContent em {
+    color: #bb9af7;
+    /* Light purple for italics */
+    font-style: italic;
+}
+
+.singleContent strong,
+.singleContent b {
+    color: #f7768e;
+    /* Pink for bold text */
+    font-weight: bold;
+}
+
+/* For extra emphasis, when both bold and italic are used */
+.singleContent strong em,
+.singleContent em strong,
+.singleContent b em,
+.singleContent em b {
+    color: #ff9e64;
+    /* Orange for combined bold and italic */
+    font-weight: bold;
+    font-style: italic;
+}
 
 
 
