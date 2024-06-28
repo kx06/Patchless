@@ -81,7 +81,7 @@ a {
 
 
 
-.searchButton {
+/* .searchButton {
     display: flex;
     align-content: center;
     gap: 10px;
@@ -91,7 +91,7 @@ a {
     padding-left: 4px;
     padding-right: 4px;
     border-radius: 7px;
-}
+} */
 
 
 .footer {
@@ -302,6 +302,8 @@ a.singleCategory {
 
 .singleBottom {
     display: flex;
+    flex-direction: column;
+    max-width: 100%;
     justify-content: space-between;
     gap: 50px;
     margin-top: 5px;
@@ -470,16 +472,25 @@ a.singleCategory {
     .container {
         max-width: 1366px;
     }
+    .singleBottom {
+        max-width: 1366px;
+    }
 }
 
 @media (max-width: 1336px) {
     .container {
         max-width: 1280px;
     }
+    .singleBottom {
+        max-width: 1280px;
+    }
 }
 
 @media (max-width: 1280px) {
     .container {
+        max-width: 1024px;
+    }
+    .singleBottom {
         max-width: 1024px;
     }
 }
@@ -490,12 +501,18 @@ a.singleCategory {
         padding-left: 10px;
         padding-right: 10px;
     }
+    .singleBottom {
+        max-width: 768px;
+    }
 }
 
 @media (max-width: 768px) {
     .container {
         max-width: 640px;
         font-size: 10px;
+    }
+    .singleBottom{
+        max-width: 640px;
     }
 
     .logo {
@@ -506,53 +523,6 @@ a.singleCategory {
         font-size: 15px;
     }
 
-    .singleContent {
-        font-size: 11px;
-        line-height: 20px;
-        color: #F0EBE3;
-        margin: 20px 0px;
-    }
-
-    .singleContent h1 {
-        font-size: 16px;
-        line-height: 60px;
-    }
-
-    .singleContent h2 {
-        font-size: 16px;
-        line-height: 50px;
-    }
-
-    .singleContent h3 {
-        font-size: 16px;
-        line-height: 40px;
-    }
-
-    .singleContent h4 {
-        font-size: 16px;
-        line-height: 30px;
-    }
-
-    .singleTime {
-        font-size: 13px;
-    }
-
-    .singleCategory {
-        font-size: 10px;
-    }
-
-    .singleHeadTitle {
-        font-size: 20px;
-    }
-
-    .singleBottom {
-        overflow-wrap: break-word;
-        ;
-    }
-
-    /* .searchButton span {
-        display: none;
-    } */
 }
 
 
@@ -567,11 +537,17 @@ a.singleCategory {
     .container {
         max-width: 360px;
     }
+    .singleBottom {
+        max-width: 360px;
+    }
 }
 
 
 @media (max-width: 360px) {
     .container {
+        max-width: 240px;
+    }
+    .singleBottom {
         max-width: 240px;
     }
 }

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Patchless</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>http://localhost:34391/categories/</link>
     <description>Recent content in Categories on Patchless</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 25 Jun 2024 21:41:09 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:34391/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>General</title>
-      <link>http://localhost:1313/categories/general/</link>
+      <link>http://localhost:34391/categories/general/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/general/</guid>
+      <guid>http://localhost:34391/categories/general/</guid>
       <description></description>
     </item>
     <item>
       <title>CTF</title>
-      <link>http://localhost:1313/categories/ctf/</link>
+      <link>http://localhost:34391/categories/ctf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/ctf/</guid>
+      <guid>http://localhost:34391/categories/ctf/</guid>
       <description></description>
     </item>
     <item>
       <title>Play</title>
-      <link>http://localhost:1313/categories/play/</link>
+      <link>http://localhost:34391/categories/play/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/play/</guid>
+      <guid>http://localhost:34391/categories/play/</guid>
       <description></description>
     </item>
   </channel>
