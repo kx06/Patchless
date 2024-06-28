@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Play on Patchless</title>
-    <link>http://localhost:34391/categories/play/</link>
+    <link>http://localhost:1313/categories/play/</link>
     <description>Recent content in Play on Patchless</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 25 Jun 2024 06:51:02 +0530</lastBuildDate>
-    <atom:link href="http://localhost:34391/categories/play/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/play/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
-      <link>http://localhost:34391/test/</link>
+      <link>http://localhost:1313/test/</link>
       <pubDate>Tue, 25 Jun 2024 06:51:02 +0530</pubDate>
-      <guid>http://localhost:34391/test/</guid>
+      <guid>http://localhost:1313/test/</guid>
       <description>#Example&#xA;some content</description>
     </item>
   </channel>

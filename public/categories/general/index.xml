@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General on Patchless</title>
-    <link>http://localhost:34391/categories/general/</link>
+    <link>http://localhost:1313/categories/general/</link>
     <description>Recent content in General on Patchless</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 25 Jun 2024 21:41:09 +0530</lastBuildDate>
-    <atom:link href="http://localhost:34391/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/general/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OS : Segmentation and virtual memory</title>
-      <link>http://localhost:34391/osunit3/</link>
+      <link>http://localhost:1313/osunit3/</link>
       <pubDate>Tue, 25 Jun 2024 21:41:09 +0530</pubDate>
-      <guid>http://localhost:34391/osunit3/</guid>
+      <guid>http://localhost:1313/osunit3/</guid>
       <description>Main Memory several issues that are pertinent to managing memory: basic hardware, the binding of symbolic memory addresses to actual physical addresses, and the distinction between logical and physical addresses.&#xA;8.1 8.1.1 Basic Hardware Main memory and the registers built into the processor itself are the only general-purpose storage that the CPU can access directly. There are machine instructions that take memory addresses as arguments, but none that take disk addresses.</description>
     </item>
     <item>
       <title>Test3</title>
-      <link>http://localhost:34391/test3/</link>
+      <link>http://localhost:1313/test3/</link>
       <pubDate>Tue, 25 Jun 2024 19:02:20 +0530</pubDate>
-      <guid>http://localhost:34391/test3/</guid>
+      <guid>http://localhost:1313/test3/</guid>
       <description>Example 3 hahah hope it works bitchks;</description>
     </item>
     <item>
       <title>Test2</title>
-      <link>http://localhost:34391/test2/</link>
+      <link>http://localhost:1313/test2/</link>
       <pubDate>Tue, 25 Jun 2024 06:57:08 +0530</pubDate>
-      <guid>http://localhost:34391/test2/</guid>
+      <guid>http://localhost:1313/test2/</guid>
       <description>#Example&#xA;some content 2</description>
     </item>
     <item>
       <title>Test</title>
-      <link>http://localhost:34391/test/</link>
+      <link>http://localhost:1313/test/</link>
       <pubDate>Tue, 25 Jun 2024 06:51:02 +0530</pubDate>
-      <guid>http://localhost:34391/test/</guid>
+      <guid>http://localhost:1313/test/</guid>
       <description>#Example&#xA;some content</description>
     </item>
   </channel>

@@ -522,6 +522,18 @@ a.singleCategory {
     .links {
         font-size: 15px;
     }
+    .listItemTextsHeading {
+        font-size: 17px;
+    }
+    .listItemDesc {
+        font-size: 12px;
+    }
+    .listItemDetail{
+        font-size: 10px;
+    }
+    .listItemCategory{
+        font-size: 11px;
+    }
 
 }
 
