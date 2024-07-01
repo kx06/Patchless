@@ -5,11 +5,12 @@
 
             <h1 class="singleHeadTitle">{{.Title}}</h1>
             {{/*  <p class="singleHeadDesc">{{.Params.description}}</p>  */}}
-            <time class="singleTime">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
             <div class="singleHeadDetail">
                 {{ range (.GetTerms "categories")}}
                     <a href={{.Permalink}} class="singleCategory">{{.Name}}</a>
                 {{ end }}
+                <p class="singleHeadDetailPara">&#x2022;</p>
+                <time class="singleTime">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
             </div>
         </div>
     </div>

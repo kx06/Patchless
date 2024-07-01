@@ -26,11 +26,12 @@
 
             <h1 class="singleHeadTitle">OS : Segmentation and virtual memory</h1>
             
-            <time class="singleTime">25 Jun, 2024</time>
             <div class="singleHeadDetail">
                 
                     <a href=http://localhost:1313/categories/general/ class="singleCategory">General</a>
                 
+                <p class="singleHeadDetailPara">&#x2022;</p>
+                <time class="singleTime">25 Jun, 2024</time>
             </div>
         </div>
     </div>
@@ -39,7 +40,74 @@
             <h1 id="main-memory">Main Memory</h1>
 <p>several issues that are pertinent to managing memory: basic hardware, the binding of symbolic memory addresses to actual physical addresses, and the distinction between logical and physical addresses.</p>
 <h2 id="81">8.1</h2>
-<h3 id="811-basic-hardware">8.1.1 Basic Hardware</h3>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># test python (sample from offlineimap)</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#cba6f7">class</span> <span style="color:#f9e2af">ExitNotifyThread</span>(Thread):
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e3a1">&#34;&#34;&#34;This class is designed to alert a &#34;monitor&#34; to the fact that a thread has
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">    exited and to provide for the ability for it to find out why.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">run</span>(<span style="color:#89dceb">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">global</span> exitthreads, profiledir
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>threadid <span style="color:#89dceb;font-weight:bold">=</span> thread<span style="color:#89dceb;font-weight:bold">.</span>get_ident()
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">if</span> <span style="color:#89dceb;font-weight:bold">not</span> profiledir:          <span style="color:#6c7086;font-style:italic"># normal case</span>
+</span></span><span style="display:flex;"><span>                Thread<span style="color:#89dceb;font-weight:bold">.</span>run(<span style="color:#89dceb">self</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#cba6f7">try</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#94e2d5">import</span> <span style="color:#fab387">cProfile</span> <span style="color:#cba6f7">as</span> <span style="color:#fab387">profile</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#cba6f7">except</span> <span style="color:#fab387">ImportError</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#94e2d5">import</span> <span style="color:#fab387">profile</span>
+</span></span><span style="display:flex;"><span>                prof <span style="color:#89dceb;font-weight:bold">=</span> profile<span style="color:#89dceb;font-weight:bold">.</span>Profile()
+</span></span><span style="display:flex;"><span>                <span style="color:#cba6f7">try</span>:
+</span></span><span style="display:flex;"><span>                    prof <span style="color:#89dceb;font-weight:bold">=</span> prof<span style="color:#89dceb;font-weight:bold">.</span>runctx(<span style="color:#a6e3a1">&#34;Thread.run(self)&#34;</span>, <span style="color:#89dceb">globals</span>(), <span style="color:#89dceb">locals</span>())
+</span></span><span style="display:flex;"><span>                <span style="color:#cba6f7">except</span> <span style="color:#fab387">SystemExit</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#cba6f7">pass</span>
+</span></span><span style="display:flex;"><span>                prof<span style="color:#89dceb;font-weight:bold">.</span>dump_stats( \
+</span></span><span style="display:flex;"><span>                            profiledir <span style="color:#89dceb;font-weight:bold">+</span> <span style="color:#a6e3a1">&#34;/&#34;</span> <span style="color:#89dceb;font-weight:bold">+</span> <span style="color:#89dceb">str</span>(<span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>threadid) <span style="color:#89dceb;font-weight:bold">+</span> <span style="color:#a6e3a1">&#34;_&#34;</span> <span style="color:#89dceb;font-weight:bold">+</span> \
+</span></span><span style="display:flex;"><span>                            <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>getName() <span style="color:#89dceb;font-weight:bold">+</span> <span style="color:#a6e3a1">&#34;.prof&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">except</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>setExitCause(<span style="color:#a6e3a1">&#39;EXCEPTION&#39;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">if</span> sys:
+</span></span><span style="display:flex;"><span>                <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>setExitException(sys<span style="color:#89dceb;font-weight:bold">.</span>exc_info()[<span style="color:#fab387">1</span>])
+</span></span><span style="display:flex;"><span>                tb <span style="color:#89dceb;font-weight:bold">=</span> traceback<span style="color:#89dceb;font-weight:bold">.</span>format_exc()
+</span></span><span style="display:flex;"><span>                <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>setExitStackTrace(tb)
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>setExitCause(<span style="color:#a6e3a1">&#39;NORMAL&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">if</span> <span style="color:#89dceb;font-weight:bold">not</span> <span style="color:#89dceb">hasattr</span>(<span style="color:#89dceb">self</span>, <span style="color:#a6e3a1">&#39;exitmessage&#39;</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>setExitMessage(<span style="color:#fab387">None</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">if</span> exitthreads:
+</span></span><span style="display:flex;"><span>            exitthreads<span style="color:#89dceb;font-weight:bold">.</span>put(<span style="color:#89dceb">self</span>, <span style="color:#fab387">True</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">setExitCause</span>(<span style="color:#89dceb">self</span>, cause):
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>exitcause <span style="color:#89dceb;font-weight:bold">=</span> cause
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">getExitCause</span>(<span style="color:#89dceb">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e3a1">&#34;&#34;&#34;Returns the cause of the exit, one of:
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        &#39;EXCEPTION&#39; -- the thread aborted because of an exception
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        &#39;NORMAL&#39; -- normal termination.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">return</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>exitcause
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">setExitException</span>(<span style="color:#89dceb">self</span>, exc):
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>exitexception <span style="color:#89dceb;font-weight:bold">=</span> exc
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">getExitException</span>(<span style="color:#89dceb">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e3a1">&#34;&#34;&#34;If getExitCause() is &#39;EXCEPTION&#39;, holds the value from
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        sys.exc_info()[1] for this exception.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">return</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>exitexception
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">setExitStackTrace</span>(<span style="color:#89dceb">self</span>, st):
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>exitstacktrace <span style="color:#89dceb;font-weight:bold">=</span> st
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">getExitStackTrace</span>(<span style="color:#89dceb">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e3a1">&#34;&#34;&#34;If getExitCause() is &#39;EXCEPTION&#39;, returns a string representing
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        the stack trace for this exception.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">return</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>exitstacktrace
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">setExitMessage</span>(<span style="color:#89dceb">self</span>, msg):
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e3a1">&#34;&#34;&#34;Sets the exit message to be fetched by a subsequent call to
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        getExitMessage.  This message may be any object or type except
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        None.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>exitmessage <span style="color:#89dceb;font-weight:bold">=</span> msg
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">getExitMessage</span>(<span style="color:#89dceb">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e3a1">&#34;&#34;&#34;For any exit cause, returns the message previously set by
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        a call to setExitMessage(), or None if there was no such message
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        set.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">return</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>exitmessage
+</span></span></code></pre></div><h3 id="811-basic-hardware">8.1.1 Basic Hardware</h3>
 <ol>
 <li>Main memory and the registers built into the processor itself are the only general-purpose storage that the CPU can access directly.</li>
 <li>There are machine instructions that take memory addresses as arguments, but none that take disk addresses.</li>

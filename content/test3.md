@@ -3,7 +3,7 @@ title = 'Test3'
 date = 2024-06-25T19:02:20+05:30
 draft = false
 description = "This is test 3"
-image = "/images/ctfDefault.jpg"
+image = "/images/ctfImage2.svg"
 categories = ["General", "CTF"]
 +++
 

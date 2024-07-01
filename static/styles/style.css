@@ -1,32 +1,27 @@
 :root {
-    --bg: #19181A;
-    --bgSoft: #35363D;
+    --bg: #19181a;
+    --bgSoft: #35363d;
     --text: #cdcdcd;
     --textSoft: #c0c0c0;
 }
-
 
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
-
 body {
     background: var(--bg);
     color: var(--text);
 }
-
 
 a {
     color: inherit;
     text-decoration: none;
 }
 
-
-
-
 .navbar {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,28 +53,23 @@ a {
     transform: scaleX(1);
 }
 
-
 .logo {
-    color: #9f80a7;
+    color: #d5cee6;
     font-weight: bold;
     font-size: 35px;
 }
 
 .logo:hover {
-    color: #D5CEE6;
+    color: #CACBD7;
 }
 
-
-
 .links {
-    color: #8D89A2;
+    color: #d5cee6;
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 19px;
 }
-
-
 
 /* .searchButton {
     display: flex;
@@ -93,9 +83,8 @@ a {
     border-radius: 7px;
 } */
 
-
 .footer {
-    color: #8D89A2;
+    color: #8d89a2;
     margin: 15px;
     display: flex;
     align-items: center;
@@ -109,8 +98,6 @@ a {
     gap: 5px;
 }
 
-
-
 .container {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1366px;
@@ -123,8 +110,6 @@ a {
     justify-content: space-between;
 }
 
-
-
 .listItem {
     display: flex;
     align-items: center;
@@ -133,6 +118,7 @@ a {
 }
 
 .listItemImage {
+    background-color: white;
     border-radius: 5px;
     width: 150px;
     height: 150px;
@@ -146,7 +132,7 @@ a {
 }
 
 .listItemDesc {
-    color: #B2B4BA;
+    color: #b2b4ba;
     font-size: 14px;
 }
 
@@ -156,11 +142,11 @@ a {
 
 .listItemTextsHeading:hover {
     text-decoration: underline dotted;
-    color: #825D8D;
+    color: #825d8d;
 }
 
 .listItemDetail {
-    color: #B2B4BA;
+    color: #b2b4ba;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -173,7 +159,7 @@ a {
 }
 
 .listItemCategory {
-    color: #B4A5B8;
+    color: #b4a5b8;
     font-size: 12px;
 }
 
@@ -190,16 +176,12 @@ a.listItemCategory::before {
     height: 1px;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.20s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
-
 
 a.listItemCategory:hover::before {
     transform: scaleX(1);
 }
-
-
-
 
 .pagination {
     display: flex;
@@ -250,10 +232,8 @@ a.singleCategory::before {
     height: 1px;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.20s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
-
-
 
 a.singleCategory:hover::before {
     transform: scaleX(1);
@@ -261,7 +241,7 @@ a.singleCategory:hover::before {
 
 a.singleCategory {
     font-size: 13px;
-    color: #B4A5B8;
+    color: #b4a5b8;
 }
 
 .singleHead {
@@ -279,8 +259,8 @@ a.singleCategory {
 }
 
 .singleHeadTitle {
-    font-size: 26px;
-    color: #825D8D;
+    font-size: 30px;
+    color: #CACBD7;
 }
 
 .singleHeadDesc {
@@ -289,16 +269,19 @@ a.singleCategory {
 }
 
 .singleTime {
-    color: #B4A5B8;
+    color: #b4a5b8;
     font-size: 14px;
 }
 
 .singleHeadDetail {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
+.singleHeadDetailPara {
+    color: #D8BFD8;
+}
 
 .singleBottom {
     display: flex;
@@ -309,15 +292,12 @@ a.singleCategory {
     margin-top: 5px;
 }
 
-
-
 .singleContent {
     font-size: 15px;
     line-height: 27px;
     color: #a9b1d6;
     margin: 20px 0px;
 }
-
 
 .singleContent h1 {
     color: #bb9af7;
@@ -337,7 +317,6 @@ a.singleCategory {
     line-height: 70px;
 }
 
-
 .singleContent h4 {
     color: #ff9e64;
     font-size: 20px;
@@ -349,9 +328,9 @@ a.singleCategory {
     text-decoration: underline;
 }
 
-
-.singleContent ul, .singleContent ol {
-    margin-left: 20px;
+.singleContent ul,
+.singleContent ol {
+    margin-left: 10px;
     margin-bottom: 15px;
 }
 
@@ -365,34 +344,23 @@ a.singleCategory {
     font-style: italic;
 }
 
-
 .singleContent code {
-    background-color: #1a1b26;
-    /* Dark background */
-    color: #f7768e;
-    /* Pink */
     padding: 2px 4px;
     border-radius: 3px;
     font-family: monospace;
 }
-
 
 .singleContent img {
     width: 100%;
     object-fit: cover;
 }
 
-
-
 .singleContent pre {
-    background-color: #1a1b26;
-    /* Dark background */
     padding: 15px;
     border-radius: 5px;
     overflow-x: auto;
     margin-bottom: 15px;
 }
-
 
 .singleContent pre {
     width: 100%;
@@ -401,10 +369,10 @@ a.singleCategory {
     padding: 20px;
 }
 
-.singleContent pre code {
+/* .singleContent pre code {
     background-color: transparent;
     padding: 0;
-}
+} */
 
 .singleContent img {
     max-width: 100%;
@@ -412,8 +380,6 @@ a.singleCategory {
     border-radius: 5px;
     margin-bottom: 15px;
 }
-
-
 
 .singleContent hr {
     border: none;
@@ -428,7 +394,8 @@ a.singleCategory {
     margin-bottom: 15px;
 }
 
-.singleContent th, .singleContent td {
+.singleContent th,
+.singleContent td {
     border: 1px solid #565f89;
     /* Muted blue */
     padding: 8px;
@@ -466,12 +433,11 @@ a.singleCategory {
     font-style: italic;
 }
 
-
-
 @media (max-width: 1536px) {
     .container {
         max-width: 1366px;
     }
+
     .singleBottom {
         max-width: 1366px;
     }
@@ -481,6 +447,7 @@ a.singleCategory {
     .container {
         max-width: 1280px;
     }
+
     .singleBottom {
         max-width: 1280px;
     }
@@ -490,6 +457,7 @@ a.singleCategory {
     .container {
         max-width: 1024px;
     }
+
     .singleBottom {
         max-width: 1024px;
     }
@@ -501,6 +469,7 @@ a.singleCategory {
         padding-left: 10px;
         padding-right: 10px;
     }
+
     .singleBottom {
         max-width: 768px;
     }
@@ -511,7 +480,8 @@ a.singleCategory {
         max-width: 640px;
         font-size: 10px;
     }
-    .singleBottom{
+
+    .singleBottom {
         max-width: 640px;
     }
 
@@ -522,21 +492,23 @@ a.singleCategory {
     .links {
         font-size: 15px;
     }
+
     .listItemTextsHeading {
         font-size: 17px;
     }
+
     .listItemDesc {
         font-size: 12px;
     }
-    .listItemDetail{
+
+    .listItemDetail {
         font-size: 10px;
     }
-    .listItemCategory{
+
+    .listItemCategory {
         font-size: 11px;
     }
-
 }
-
 
 @media (max-width: 640px) {
     .container {
@@ -544,21 +516,21 @@ a.singleCategory {
     }
 }
 
-
 @media (max-width: 480px) {
     .container {
         max-width: 360px;
     }
+
     .singleBottom {
         max-width: 360px;
     }
 }
 
-
 @media (max-width: 360px) {
     .container {
         max-width: 240px;
     }
+
     .singleBottom {
         max-width: 240px;
     }

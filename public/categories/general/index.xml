@@ -13,7 +13,7 @@
       <link>http://localhost:1313/osunit3/</link>
       <pubDate>Tue, 25 Jun 2024 21:41:09 +0530</pubDate>
       <guid>http://localhost:1313/osunit3/</guid>
-      <description>Main Memory several issues that are pertinent to managing memory: basic hardware, the binding of symbolic memory addresses to actual physical addresses, and the distinction between logical and physical addresses.&#xA;8.1 8.1.1 Basic Hardware Main memory and the registers built into the processor itself are the only general-purpose storage that the CPU can access directly. There are machine instructions that take memory addresses as arguments, but none that take disk addresses.</description>
+      <description>Main Memory several issues that are pertinent to managing memory: basic hardware, the binding of symbolic memory addresses to actual physical addresses, and the distinction between logical and physical addresses.&#xA;8.1 # test python (sample from offlineimap) class ExitNotifyThread(Thread): &amp;#34;&amp;#34;&amp;#34;This class is designed to alert a &amp;#34;monitor&amp;#34; to the fact that a thread has exited and to provide for the ability for it to find out why.&amp;#34;&amp;#34;&amp;#34; def run(self): global exitthreads, profiledir self.</description>
     </item>
     <item>
       <title>Test3</title>
