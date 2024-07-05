@@ -87,10 +87,20 @@ a {
     color: #8d89a2;
     margin: 15px;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     height: 25px;
     font-size: 15px;
+    justify-content: center;
+}
+
+.footerlinks{
+    display: flex;
+    gap : 15px
+}
+
+.footerlinks a:hover{
+    color: #9f80a7;
 }
 
 .social {
